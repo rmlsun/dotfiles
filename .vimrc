@@ -18,6 +18,8 @@ set cursorcolumn
 set nobackup
 set nowritebackup
 "set noswapfile
+" put swap files in one place
+set dir=/tmp
 
 " search
 set hlsearch
