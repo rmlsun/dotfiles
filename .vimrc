@@ -17,9 +17,6 @@ set cursorcolumn
 
 set nobackup
 set nowritebackup
-"set noswapfile
-" put swap files in one place
-set dir=/tmp
 
 " search
 set hlsearch
@@ -37,6 +34,10 @@ set autoindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
+
+"set noswapfile
+" put swap files in one place
+set dir=/tmp
 
 " last tab
 let g:lasttab = 1
@@ -131,6 +132,8 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-sensible'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'hallison/vim-markdown'
+" have vim recognize .md file
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 "Bundle 'klen/python-mode'
 
 " solarized
