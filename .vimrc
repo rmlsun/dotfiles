@@ -132,10 +132,14 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+nnoremap <leader>st :SyntasticToggleMode<CR>
+nnoremap <leader>sc :SyntasticCheck<CR>
 
 " supertab
 Bundle 'ervandew/supertab'
@@ -150,7 +154,7 @@ au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 " solarized
 Bundle 'altercation/vim-colors-solarized'
 " set background=light
-set background=dark
+ set background=dark
 colorscheme solarized
 " let base16colorspace=256
 " colorscheme base16-solarized
@@ -159,9 +163,14 @@ let g:solarized_termtrans = 1
 
 " for git
 Bundle 'tpope/vim-fugitive'
+autocmd User fugitive 
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+" autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " vdebug
-Bundle 'joonty/vdebug'
+"Bundle 'joonty/vdebug'
 "let g:vdebug_options["port"] = 9002
 
 call vundle#end()
