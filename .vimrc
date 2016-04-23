@@ -6,7 +6,7 @@ syntax on
 :let mapleader = ","
 
 " + (system clipboard) register becomes default register
-"set clipboard=unnamed 
+"set clipboard=unnamed
 
 " pastetoggle
 set pastetoggle=<F2>
@@ -17,6 +17,7 @@ set cursorcolumn
 
 set nobackup
 set nowritebackup
+set noswapfile
 
 " search
 set hlsearch
@@ -28,14 +29,11 @@ set smartcase
 " support mouse
 set mouse=a
 
-" indent 
-set smartindent
-set autoindent
+" indent
 set expandtab
 set tabstop=4
 set shiftwidth=4
 
-"set noswapfile
 " put swap files in one place
 set dir=/tmp
 
@@ -64,14 +62,14 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" 
+"
 " get vundle: git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 Bundle 'L9'
@@ -163,7 +161,7 @@ let g:solarized_termtrans = 1
 
 " for git
 Bundle 'tpope/vim-fugitive'
-autocmd User fugitive 
+autocmd User fugitive
   \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
