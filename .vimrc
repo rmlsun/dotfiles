@@ -17,7 +17,7 @@ set cursorcolumn
 
 set nobackup
 set nowritebackup
-set noswapfile
+"set noswapfile
 
 " search
 set hlsearch
@@ -30,6 +30,8 @@ set smartcase
 set mouse=a
 
 " indent
+" set smartindent
+" set autoindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -133,11 +135,12 @@ set statusline+=%*
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<CR>
+nnoremap <leader>sr :SyntasticReset<CR>
 
 " supertab
 Bundle 'ervandew/supertab'
@@ -158,6 +161,7 @@ colorscheme solarized
 " colorscheme base16-solarized
 " colorscheme base16-default
 let g:solarized_termtrans = 1
+let g:solarized_visibility = "high"
 
 " for git
 Bundle 'tpope/vim-fugitive'
@@ -170,6 +174,20 @@ autocmd User fugitive
 " vdebug
 "Bundle 'joonty/vdebug'
 "let g:vdebug_options["port"] = 9002
+
+" Golang
+Bundle 'fatih/vim-go'
+" recommended setting
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+" fix lagging w/ syntastic
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 call vundle#end()
 filetype plugin indent on     " required!
