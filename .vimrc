@@ -46,8 +46,6 @@ au TabLeave * let g:lasttab = tabpagenr()
 
 " change window local directory
 nnoremap <Leader>cd :lcd %:p:h<CR>:pwd<CR>
-" Find current file in NERDTree
-nnoremap <leader>nf :NERDTreeFind<cr>
 
 " ctags
 set tags=./tags;/
@@ -79,6 +77,10 @@ Bundle 'L9'
 " NERDTree
 Bundle 'scrooloose/nerdtree.git'
 map <F3> :NERDTreeToggle<CR>
+" Find current file in NERDTree
+nnoremap <leader>nf :NERDTreeFind<cr>
+" Ignore pyc files
+let NERDTreeIgnore = ['\.pyc$']
 
 " Lusty explorer
 Bundle 'vim-scripts/LustyExplorer'
@@ -155,7 +157,7 @@ au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 " solarized
 Bundle 'altercation/vim-colors-solarized'
 " set background=light
- set background=dark
+set background=dark
 colorscheme solarized
 " let base16colorspace=256
 " colorscheme base16-solarized
