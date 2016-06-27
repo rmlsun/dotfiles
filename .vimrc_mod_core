@@ -2,7 +2,7 @@
 Plug 'tpope/vim-sensible'
 
 " nerdtree
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
 map <F3> :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<cr>
 " Ignore pyc files
