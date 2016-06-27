@@ -66,8 +66,6 @@ filetype plugin indent on     " required!
 call plug#begin()
 
 source .vimrc_mod_core
-source .vimrc_mod_dev
-source .vimrc_mod_golang
 
 " Plugins with vim-plug: END
 call plug#end()

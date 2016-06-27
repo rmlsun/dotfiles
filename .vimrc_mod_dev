@@ -1,0 +1,44 @@
+"
+" Stuff for dev
+"
+
+" fugitive / git
+Plug 'tpope/vim-fugitive'
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+" autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" TagBar
+Plug 'majutsushi/tagbar'
+nnoremap <leader>tt :TagbarToggle<CR>
+nnoremap <leader>tf :TagbarOpenAutoClose<CR>
+
+" cscope
+Plug 'chazy/cscope_maps'
+Plug 'vim-scripts/autoload_cscope.vim'
+
+" markdown
+Plug 'hallison/vim-markdown'
+" have vim recognize .md file
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+" vdebug
+"Plug 'joonty/vdebug'
+"let g:vdebug_options["port"] = 9002
+
+" syntastic
+Plug 'scrooloose/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+nnoremap <leader>st :SyntasticToggleMode<CR>
+nnoremap <leader>sc :SyntasticCheck<CR>
+nnoremap <leader>sr :SyntasticReset<CR>
