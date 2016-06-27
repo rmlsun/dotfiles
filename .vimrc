@@ -114,7 +114,7 @@ Plug 'altercation/vim-colors-solarized', { 'do': g:solarized_install }
 colorscheme solarized
 set background=dark
 
-source ~/.vimrc_mod_dev
+" source ~/.vimrc_mod_dev
 " source ~/.vimrc_mod_golang
 
 " Plugins with vim-plug: END
