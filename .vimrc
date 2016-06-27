@@ -76,7 +76,7 @@ nnoremap <leader>nf :NERDTreeFind<cr>
 let NERDTreeIgnore = ['\.pyc$']
 
 " CtrlP
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<C-P>'
 let g:ctrlp_max_files = 0
 let g:ctrlp_working_path_mode = 'ra'
