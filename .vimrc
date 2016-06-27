@@ -65,9 +65,47 @@ filetype plugin indent on     " required!
 " Plugins with vim-plug: BEGIN
 call plug#begin()
 
-source ~/.vimrc_mod_core
-"source ~/.vimrc_mod_dev
-"source ~/.vimrc_mod_golang
+" sensible
+Plug 'tpope/vim-sensible'
+
+" nerdtree
+Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
+map <F3> :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<cr>
+" Ignore pyc files
+let NERDTreeIgnore = ['\.pyc$']
+
+" CtrlP
+Plug 'kien/ctrlp.vim'
+let g:ctrlp_map = '<C-P>'
+let g:ctrlp_max_files = 0
+let g:ctrlp_working_path_mode = 'ra'
+" Plug 'JazzCore/ctrlp-cmatcher'
+" let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+"       \ --ignore .git
+"       \ --ignore .svn
+"       \ --ignore .hg
+"       \ --ignore .DS_Store
+"       \ --ignore "**/*.pyc"
+"       \ -g ""'
+" let g:ctrlp_match_func = {'match' : 'matcher#cmatch'}
+Plug 'FelikZ/ctrlp-py-matcher'
+let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
+
+" airline
+Plug 'bling/vim-airline'
+
+" supertab
+Plug 'ervandew/supertab'
+
+" solarized
+let g:solarized_install = 'mkdir -p ~/.vim/colors && cp ./colors/solarized.vim ~/.vim/colors'
+Plug 'altercation/vim-colors-solarized', { 'do': g:solarized_install }
+colorscheme solarized
+set background=dark
+
+" source ~/.vimrc_mod_dev
+" source ~/.vimrc_mod_golang
 
 " Plugins with vim-plug: END
 call plug#end()
