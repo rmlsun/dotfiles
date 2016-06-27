@@ -75,6 +75,15 @@ nnoremap <leader>nf :NERDTreeFind<cr>
 " Ignore pyc files
 let NERDTreeIgnore = ['\.pyc$']
 
+" TabMan
+Plug 'kien/tabman.vim'
+let g:tabman_toggle = '<leader>mt'
+let g:tabman_focus  = '<leader>mf'
+let g:tabman_side = 'right'
+let g:tabman_specials = 0
+let g:tabman_number = 0
+
+
 " CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<C-P>'
