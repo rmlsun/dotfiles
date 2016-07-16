@@ -60,6 +60,9 @@ nnoremap ]Q :clast<CR>
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 filetype plugin indent on     " required!
 
+" ignore patterns
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
 "
 " curl -ksfLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " Plugins with vim-plug: BEGIN
@@ -90,6 +93,13 @@ let g:ctrlp_map = '<C-P>'
 let g:ctrlp_max_files = 0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_cmatcher_install = './install.sh'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+" Ignore files in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " Plug 'JazzCore/ctrlp-cmatcher', { 'do': g:ctrlp_cmatcher_install }
 " let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 "       \ --ignore .git
