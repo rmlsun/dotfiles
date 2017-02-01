@@ -42,3 +42,9 @@ let g:syntastic_aggregate_errors = 1
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sc :SyntasticCheck<CR>
 nnoremap <leader>sr :SyntasticReset<CR>
+
+" vim-dispatch
+Plug 'tpope/vim-dispatch'
+
+" snippet
+Plug 'SirVer/ultisnips'

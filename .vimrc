@@ -25,6 +25,7 @@ set incsearch
 set showmatch
 set ignorecase
 set smartcase
+set autowrite
 
 " support mouse
 set mouse=a
@@ -55,6 +56,7 @@ nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :cfirst<CR>
 nnoremap ]Q :clast<CR>
+nnoremap <leader>qc :cclose<CR>
 
 " status line
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
@@ -118,14 +120,21 @@ Plug 'bling/vim-airline'
 " supertab
 Plug 'ervandew/supertab'
 
-" solarized
-let g:solarized_install = 'mkdir -p ~/.vim/colors && cp ./colors/solarized.vim ~/.vim/colors'
-Plug 'altercation/vim-colors-solarized', { 'do': g:solarized_install }
-colorscheme solarized
+" colorscheme pack
+" let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/onedark.vim ~/.vim/colors'
+let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/Monokai.vim ~/.vim/colors'
+Plug 'flazz/vim-colorschemes', { 'do': g:colorscheme_init }
+colorscheme Monokai
+
+" colorscheme onedark
+" let g:onedark_install = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/onedark.vim/colors/onedark.vim ~/.vim/colors'
+" Plug 'joshdick/onedark.vim', { 'do': g:onedark_install }
+
 set background=dark
 
-" source ~/.vimrc_mod_dev
-" source ~/.vimrc_mod_golang
+
+source ~/.vimrc_mod_dev
+source ~/.vimrc_mod_golang
 
 " Plugins with vim-plug: END
 call plug#end()
