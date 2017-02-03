@@ -120,15 +120,18 @@ Plug 'bling/vim-airline'
 " supertab
 Plug 'ervandew/supertab'
 
-" colorscheme pack
-" let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/onedark.vim ~/.vim/colors'
-let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/Monokai.vim ~/.vim/colors'
-Plug 'flazz/vim-colorschemes', { 'do': g:colorscheme_init }
-colorscheme Monokai
+"Plug 'Valloric/YouCompleteMe'
 
-" colorscheme onedark
-" let g:onedark_install = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/onedark.vim/colors/onedark.vim ~/.vim/colors'
-" Plug 'joshdick/onedark.vim', { 'do': g:onedark_install }
+" colorscheme pack
+" let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/Monokai.vim ~/.vim/colors'
+" Plug 'flazz/vim-colorschemes', { 'do': g:colorscheme_init }
+" colorscheme Monokai
+Plug 'flazz/vim-colorschemes'
+
+let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim/colors/dracula.vim ~/.vim/colors'
+Plug 'dracula/vim', { 'do': g:colorscheme_init }
+color dracula
+
 
 set background=dark
 
