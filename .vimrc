@@ -120,7 +120,7 @@ Plug 'bling/vim-airline'
 " supertab
 Plug 'ervandew/supertab'
 
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Raimondi/delimitMate'
 
 " colorscheme pack
 " let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/Monokai.vim ~/.vim/colors'
@@ -134,7 +134,6 @@ color dracula
 
 
 set background=dark
-
 
 "source ~/.vimrc_mod_dev
 "source ~/.vimrc_mod_golang
