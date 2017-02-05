@@ -121,6 +121,7 @@ Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
 
 Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-surround'
 
 " colorscheme pack
 " let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/Monokai.vim ~/.vim/colors'
