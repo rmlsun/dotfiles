@@ -30,4 +30,12 @@ autocmd FileType go nmap <leader>i  <Plug>(go-imports)
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 " nnoremap <Leader>gb :GoBuild<CR>
 " nnoremap <Leader>gr :GoRun<CR>
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
+autocmd FileType go nmap <Leader>I <Plug>(go-info)
+autocmd FileType go nmap <Leader>R <Plug>(go-rename)
+"let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1

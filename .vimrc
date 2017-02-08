@@ -136,8 +136,9 @@ color dracula
 
 set background=dark
 
-"source ~/.vimrc_mod_dev
-"source ~/.vimrc_mod_golang
+
+" source ~/.vimrc_mod_dev
+" source ~/.vimrc_mod_golang
 
 " Plugins with vim-plug: END
 call plug#end()
