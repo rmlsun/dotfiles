@@ -10,6 +10,8 @@ autocmd User fugitive
   \ endif
 " autocmd BufReadPost fugitive://* set bufhidden=delete
 
+Plug 'vim-rhubarb'
+
 " TagBar
 Plug 'majutsushi/tagbar'
 nnoremap <leader>tt :TagbarToggle<CR>
