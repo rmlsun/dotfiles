@@ -13,11 +13,11 @@ set pastetoggle=<F2>
 
 " hightlight current line and current column
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 
 set nobackup
 set nowritebackup
-"set noswapfile
+set noswapfile
 
 " search
 set hlsearch
@@ -36,6 +36,9 @@ set mouse=a
 set expandtab
 set tabstop=4
 set shiftwidth=4
+
+" line number
+set nu
 
 " put swap files in one place
 set dir=/tmp
@@ -69,6 +72,10 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 " curl -ksfLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " Plugins with vim-plug: BEGIN
 call plug#begin()
+
+" intent line
+Plug 'Yggdroot/indentLine'
+let g:indentLine_setColors = 0
 
 " sensible
 Plug 'tpope/vim-sensible'
@@ -124,21 +131,25 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 
 " colorscheme pack
-" let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/Monokai.vim ~/.vim/colors'
-" Plug 'flazz/vim-colorschemes', { 'do': g:colorscheme_init }
-" colorscheme Monokai
+"let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/PaperColor.vim ~/.vim/colors'
+"Plug 'flazz/vim-colorschemes', { 'do': g:colorscheme_init }
 Plug 'flazz/vim-colorschemes'
+"colorscheme Monokai
 
-let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim/colors/dracula.vim ~/.vim/colors'
-Plug 'dracula/vim', { 'do': g:colorscheme_init }
+let g:colorscheme_init_dracula = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim/colors/dracula.vim ~/.vim/colors'
+Plug 'dracula/vim', { 'do': g:colorscheme_init_dracula }
 color dracula
 
+let g:colorscheme_init_deus = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-deus/colors/deus.vim ~/.vim/colors'
+Plug 'ajmwagar/vim-deus', { 'do': g:colorscheme_init_deus }
+"color deus
 
-set background=dark
+
+"set background=dark
 
 
-" source ~/.vimrc_mod_dev
-" source ~/.vimrc_mod_golang
+source ~/.vimrc_mod_dev
+source ~/.vimrc_mod_golang
 
 " Plugins with vim-plug: END
 call plug#end()
