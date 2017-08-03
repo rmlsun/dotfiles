@@ -13,7 +13,7 @@ set pastetoggle=<F2>
 
 " hightlight current line and current column
 set cursorline
-" set cursorcolumn
+set cursorcolumn
 
 set nobackup
 set nowritebackup
@@ -74,8 +74,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 call plug#begin()
 
 " intent line
-Plug 'Yggdroot/indentLine'
-let g:indentLine_setColors = 0
+"Plug 'Yggdroot/indentLine'
+"let g:indentLine_setColors = 0
 
 " sensible
 Plug 'tpope/vim-sensible'
