@@ -37,6 +37,9 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
+nmap <leader>l :set invlist<cr>
+
 " line number
 set nu
 
