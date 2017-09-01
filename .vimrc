@@ -132,6 +132,7 @@ Plug 'ervandew/supertab'
 
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
+Plug 'tpope/tpope-vim-abolish'
 
 " colorscheme pack
 "let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/PaperColor.vim ~/.vim/colors'
