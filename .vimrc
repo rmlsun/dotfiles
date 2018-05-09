@@ -1,7 +1,6 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 syntax on
-
 " change leader key
 :let mapleader = ","
 
@@ -41,7 +40,7 @@ set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
 nmap <leader>l :set invlist<cr>
 
 " line number
-set nu
+"set nu
 
 " put swap files in one place
 set dir=/tmp
@@ -131,8 +130,10 @@ Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
 
 Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/tpope-vim-abolish'
+"Plug 'svermeulen/vim-easyclip'
 
 " colorscheme pack
 "let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/PaperColor.vim ~/.vim/colors'
@@ -147,13 +148,13 @@ color dracula
 let g:colorscheme_init_deus = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-deus/colors/deus.vim ~/.vim/colors'
 Plug 'ajmwagar/vim-deus', { 'do': g:colorscheme_init_deus }
 "color deus
-
-
 "set background=dark
+"hi NonText ctermbg=none
+hi Normal guibg=NONE ctermbg=NONE
 
-
-source ~/.vimrc_mod_dev
-source ~/.vimrc_mod_golang
+"source ~/.vimrc_mod_dev
+"source ~/.vimrc_mod_golang
+"source ~/.vimrc_mod_java
 
 " Plugins with vim-plug: END
 call plug#end()
