@@ -150,7 +150,7 @@ Plug 'ajmwagar/vim-deus', { 'do': g:colorscheme_init_deus }
 "color deus
 "set background=dark
 "hi NonText ctermbg=none
-hi Normal guibg=NONE ctermbg=NONE
+hi Normal=NONE ctermbg=NONE
 
 "source ~/.vimrc_mod_dev
 "source ~/.vimrc_mod_golang
