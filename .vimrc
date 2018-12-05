@@ -149,8 +149,8 @@ let g:colorscheme_init_deus = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-d
 Plug 'ajmwagar/vim-deus', { 'do': g:colorscheme_init_deus }
 "color deus
 "set background=dark
-"hi NonText ctermbg=none
-hi Normal=NONE ctermbg=NONE
+hi NonText ctermbg=none
+hi Normal ctermbg=NONE
 
 "source ~/.vimrc_mod_dev
 "source ~/.vimrc_mod_golang
