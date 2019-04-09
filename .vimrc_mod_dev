@@ -4,10 +4,10 @@
 
 " fugitive / git
 Plug 'tpope/vim-fugitive'
-autocmd User fugitive
-  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-  \   nnoremap <buffer> .. :edit %:h<CR> |
-  \ endif
+" autocmd User fugitive
+"   \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+"   \   nnoremap <buffer> .. :edit %:h<CR> |
+"   \ endif
 " autocmd BufReadPost fugitive://* set bufhidden=delete
 
 Plug 'tpope/vim-rhubarb'
