@@ -61,6 +61,7 @@ nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :cfirst<CR>
 nnoremap ]Q :clast<CR>
+nnoremap <leader>qo :copen<CR>
 nnoremap <leader>qc :cclose<CR>
 
 " status line
@@ -136,21 +137,13 @@ Plug 'tpope/tpope-vim-abolish'
 "Plug 'svermeulen/vim-easyclip'
 
 " colorscheme pack
-"let g:colorscheme_init = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-colorschemes/colors/PaperColor.vim ~/.vim/colors'
-"Plug 'flazz/vim-colorschemes', { 'do': g:colorscheme_init }
 Plug 'flazz/vim-colorschemes'
-"colorscheme Monokai
-
-let g:colorscheme_init_dracula = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim/colors/dracula.vim ~/.vim/colors'
-Plug 'dracula/vim', { 'do': g:colorscheme_init_dracula }
-color dracula
 
 let g:colorscheme_init_deus = 'mkdir -p ~/.vim/colors && cp ~/.vim/plugged/vim-deus/colors/deus.vim ~/.vim/colors'
 Plug 'ajmwagar/vim-deus', { 'do': g:colorscheme_init_deus }
-"color deus
-"set background=dark
+colorscheme deus
 hi NonText ctermbg=none
-hi Normal ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
 "source ~/.vimrc_mod_dev
 "source ~/.vimrc_mod_golang
