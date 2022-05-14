@@ -47,6 +47,3 @@ au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " vim-dispatch
 Plug 'tpope/vim-dispatch'
-
-" snippet
-Plug 'SirVer/ultisnips'
