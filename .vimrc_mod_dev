@@ -1,6 +1,10 @@
 "
 " Stuff for dev
 "
+" Asynchronous Lint Engine, LSP client
+Plug 'dense-analysis/ale'
+
+let g:ale_linters = {'rust': ['analyzer']}
 
 " fugitive / git
 Plug 'tpope/vim-fugitive'
