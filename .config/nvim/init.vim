@@ -91,6 +91,10 @@ let g:colorscheme_init_deus = 'mkdir -p ~/.config/nvim/colors && cp ~/.local/sha
 Plug 'ajmwagar/vim-deus', { 'do': g:colorscheme_init_deus }
 colorscheme deus
 
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'simrat39/rust-tools.nvim'
+
 " Plugins with vim-plug: END
 call plug#end()
 
@@ -182,3 +186,7 @@ if executable('rg')
     set grepprg=rg\ --no-heading\ --vimgrep
     set grepformat=%f:%l:%c:%m
 endif
+
+for f in split(glob('~/.config/nvim/config/*.vim'), '\n')
+    exe 'source' f
+endfor
