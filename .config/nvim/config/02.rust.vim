@@ -1,1 +1,1 @@
-lua require("lsp_config_rust")
+"lua require("lsp_config_rust")

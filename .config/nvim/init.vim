@@ -95,6 +95,8 @@ colorscheme deus
 Plug 'neovim/nvim-lspconfig'
 Plug 'simrat39/rust-tools.nvim'
 
+Plug 'tpope/vim-fugitive'
+
 " Plugins with vim-plug: END
 call plug#end()
 
@@ -117,6 +119,8 @@ set ignorecase
 set smartcase
 set autowrite
 set gdefault
+
+set noautoread
 
 hi NonText ctermbg=none
 hi Normal guibg=NONE ctermbg=NONE
